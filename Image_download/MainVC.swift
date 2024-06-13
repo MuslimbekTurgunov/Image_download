@@ -33,7 +33,6 @@ class MainVC: UIViewController {
         API.shared.getRandomImages { urll in
             self.imageRandom.sd_imageIndicator = SDWebImageActivityIndicator.large
             self.imageRandom.sd_setImage(with: urll)
-            print(urll, "salom")
         }
         
         API.shared.getLatestImages(type: .small, page: self.currentPage, perPage: self.perPage) { imag in
